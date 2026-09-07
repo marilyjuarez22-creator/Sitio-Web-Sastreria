@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios - Sastrería Artesanal</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+header{
+    width:100%;
+    height:85px;
+    background:#0B1F3A;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 70px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: screen;
+    mix-blend-mode: screen;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    transition:.3s;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:#D4A017;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:#D4A017;
+}
+
+.container {
+    padding: 140px 10% 60px 10%;
+}
+
+h1 {
+    font-size: 42px;
+    color: #0B1F3A;
+    margin-bottom: 15px;
+}
+
+.line {
+    width: 90px;
+    height: 4px;
+    background: #D4A017;
+    margin-bottom: 40px;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.service-item {
+    background: white;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-3px);
+}
+
+/* Círculo contenedor de los iconos de sastrería */
+.service-icon {
+    min-width: 75px;
+    height: 75px;
+    background: #0B1F3A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: 2px solid #D4A017;
+}
+
+.service-icon svg {
+    width: 36px;
+    height: 36px;
+    fill: #D4A017;
+}
+
+.service-info {
+    flex-grow: 1;
+}
+
+.service-info h3 {
+    font-size: 24px;
+    color: #0B1F3A;
+    margin-bottom: 10px;
+}
+
+.service-info p {
+    font-size: 16px;
+    color: #555;
+    line-height: 26px;
+    margin-bottom: 18px;
+}
+
+.benefits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.benefits-list li {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.benefits-list li::before {
+    content: "✓";
+    color: #D4A017;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 25px;
+    background: #0B1F3A;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: #D4A017;
+}
+
+@media(max-width:900px){
+    header{
+        padding:0 20px;
+    }
+    nav ul{
+        gap:20px;
+    }
+    .container {
+        padding: 120px 6% 40px 6%;
+    }
+    .service-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">
+<img src="logo.png" alt="Logo">
+</div>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+</header>
+
+<div class="container">
+    <h1>Nuestros Servicios Profesionales</h1>
+    <div class="line"></div>
+
+    <div class="services-list">
+        <!-- Servicio 1: Confección (Icono de Aguja e Hilo / Costura) -->
+        <div class="service-item">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M18 2h-2v3h2V2m0 5h-2v3h2V7m-4-3h-2v3h2V4m0 5h-2v3h2V9m-4-3h-2v3h2V6m0 5h-2v3h2v-3M6 22l14-14-3-3L3 19v3h3z"/></svg>
+            </div>
+            <div class="service-info">
+                <h3>Confección a Medida</h3>
+                <p>Diseño y costura completamente personalizada desde cero, adaptada de manera milimétrica a la silueta exacta del cliente para garantizar un porte impecable.</p>
+                <ul class="benefits-list">
+                    <li>Toma de medidas profesional en el taller.</li>
+                    <li>Amplio catálogo de telas nacionales e importadas.</li>
+                    <li>Pruebas de ajuste personalizadas incluidas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Servicio 2: Ajustes (Icono de Botón de Costura) -->
+        <div class="service-item">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m-2-8a2 2 0 1 1 4 0 2 2 0 0 1-4 0m-4-3h2v2H6V9m12 0h-2v2h2V9m-2 6h-2v2h2v-2m-6 0H8v2h2v-2Z"/></svg>
+            </div>
+            <div class="service-info">
+                <h3>Ajustes y Modificaciones</h3>
+                <p>Servicio especializado para reestructurar, entallar o modernizar prendas que ya posees, logrando que recuperen o mejoren su calce original.</p>
+                <ul class="benefits-list">
+                    <li>Entallado preciso de sacos, camisas y pantalones.</li>
+                    <li>Reemplazo de forros y detalles interiores.</li>
+                    <li>Respeto absoluto por los acabados originales.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Servicio 3: Asesoría (Icono de Maniquí / Sótano de Moda) -->
+        <div class="service-item">
+            <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 .8.3 1.5.8 2H7c-2.2 0-4 1.8-4 4v1c0 1.1.9 2 2 2h1.1l1.5 6h8.8l1.5-6H19c1.1 0 2-.9 2-2v-1c0-2.2-1.8-4-4-4h-2.8c.5-.5.8-1.2.8-2a3 3 0 0 0-3-3m0 2c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1m-4 7h8v1H8v-1z"/></svg>
+            </div>
+            <div class="service-info">
+                <h3>Asesoría de Imagen Personalizada</h3>
+                <p>Orientación profesional sobre estilos, cortes, colores y combinaciones ideales según tu tipo de cuerpo, tono de piel y la naturaleza del evento.</p>
+                <ul class="benefits-list">
+                    <li>Elección de tendencias formales y de etiqueta.</li>
+                    <li>Recomendación de accesorios complementarios.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" class="btn-back">&larr; Regresar al Inicio</a>
+</div>
+
+<footer style="background:#0B1F3A; color:white; text-align:center; padding:30px; margin-top:50px;">
+    <h3 style="margin-bottom:10px;">Sastrería Artesanal</h3>
+    <p>Tradición, elegancia y calidad en cada prenda.</p>
+    <br>
+    <small>© 2026 Sastrería Artesanal | Todos los derechos reservados.</small>
+</footer>
+
+</body>
+</html>

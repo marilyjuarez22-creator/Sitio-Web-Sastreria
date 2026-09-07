@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sastrería Artesanal - Inicio</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background:#f5f5f5;
+}
+header{
+    width:100%;
+    height:85px;
+    background:#0B1F3A;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 70px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    mix-blend-mode: screen;
+}
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    transition:.3s;
+    position:relative;
+}
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:#D4A017;
+    transition:.3s;
+}
+nav a:hover::after{
+    width:100%;
+}
+nav a:hover{
+    color:#D4A017;
+}
+.slider{
+    width:100%;
+    height:550px;
+    overflow:hidden;
+    position:relative;
+    margin-top:85px;
+}
+.slides{
+    display:flex;
+    height:100%;
+    transition:transform .6s ease;
+}
+.slide{
+    min-width:100%;
+    height:100%;
+    position:relative;
+}
+.slide img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(11,31,58,.45);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+.overlay h1{
+    font-size:60px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+.overlay p{
+    width:70%;
+    font-size:20px;
+    line-height:34px;
+}
+.overlay a{
+    margin-top:65px;
+    text-decoration:none;
+    color:white;
+   
+    padding:15px 35px;
+    width:200px;
+    height:50px;
+    background:#D4A017;
+  
+    
+}
+.overlay a:hover{
+    background:#05a7a2;
+}
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:55px;
+    height:55px;
+    border:none;
+    background:rgba(255,255,255,.85);
+    cursor:pointer;
+    font-size:28px;
+    color:#0B1F3A;
+    border-radius:50%;
+    transition:.3s;
+}
+.arrow:hover{
+    background:#D4A017;
+    color:white;
+}
+.prev{
+    left:25px;
+}
+.next{
+    right:25px;
+}
+.dots{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:12px;
+}
+.dot{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background:white;
+    cursor:pointer;
+    transition:.3s;
+}
+.dot.active{
+    background:#D4A017;
+}
+.presentation{
+    width:100%;
+    background:white;
+    padding:90px 10%;
+}
+.presentation h2{
+    font-size:42px;
+    color:#0B1F3A;
+    margin-bottom:25px;
+}
+.line{
+    width:90px;
+    height:4px;
+    background:#D4A017;
+    margin-bottom:35px;
+}
+.presentation p{
+    max-width:900px;
+    font-size:18px;
+    line-height:34px;
+    color:#555;
+}
+.presentation a{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 35px;
+    background:#0B1F3A;
+    color:white;
+    text-decoration:none;
+  
+}
+.presentation a:hover{
+    background:#D4A017;
+}
+@media(max-width:900px){
+    header{
+        padding:0 20px;
+    }
+    nav ul{
+        gap:20px;
+    }
+    .overlay h1{
+        font-size:36px;
+    }
+    .overlay p{
+        width:90%;
+        font-size:17px;
+    }
+    .presentation{
+        padding:70px 8%;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">
+<img src="logo.png" alt="Logo">
+</div>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+</header>
+
+<section class="slider">
+<div class="slides">
+<div class="slide">
+<img src="img1.png" alt="Banner 1">
+<div class="overlay">
+<h1>Elegancia a la Medida</h1>
+<p>Cada prenda refleja precisión, tradición y un trabajo artesanal pensado para quienes buscan vestir con distinción.</p>
+<a href="productos.html">Conocer más</a>
+</div>
+</div>
+<div class="slide">
+<img src="img2.png" alt="Banner 2">
+<div class="overlay">
+<h1>Tradición y Calidad</h1>
+<p>Confeccionamos prendas únicas utilizando técnicas tradicionales y materiales cuidadosamente seleccionados.</p>
+<a href="servicios.html">Nuestros Servicios</a>
+</div>
+</div>
+<div class="slide">
+<img src="img3.png" alt="Banner 3">
+<div class="overlay">
+<h1>Detalles que Marcan la Diferencia</h1>
+<p>Cada costura, cada acabado y cada ajuste están pensados para brindar una experiencia exclusiva.</p>
+<a href="productos.html">Ver Catálogo</a>
+</div>
+</div>
+</div>
+<button class="arrow prev">&#10094;</button>
+<button class="arrow next">&#10095;</button>
+<div class="dots">
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+</section>
+
+<section class="presentation">
+    <h2>Bienvenidos a Sastrería Artesanal</h2>
+    <div class="line"></div>
+    <p>
+        Sastrería Artesanal es un taller dedicado al arte de la confección a medida,
+        donde cada prenda se trabaja con meticulosidad, rescatando las técnicas
+        tradicionales de costura para ofrecer piezas únicas, duraderas y con un ajuste
+        impecable. Nuestra marca representa la unión entre la tradición manual y la
+        atención al detalle.
+        <br><br>
+        Creemos que vestir bien va más allá de la apariencia. Cada prenda refleja la
+        personalidad de quien la usa, por eso cuidamos cada costura, cada tela y cada
+        acabado para ofrecer un resultado elegante, cómodo y de la más alta calidad.
+    </p>
+
+    
+    <a href="#">Conoce Nuestra Historia</a>
+</section>
+
+
+<footer style="background:#0B1F3A; color:white; text-align:center; padding:30px; margin-top:50px;">
+    <h3 style="margin-bottom:10px;">Sastrería Artesanal</h3>
+    <p>Tradición, elegancia y calidad en cada prenda.</p>
+    <br>
+    <small>© 2026 Sastrería Artesanal | Todos los derechos reservados.</small>
+</footer>
+
+<script>
+const slides = document.querySelector(".slides");
+const slide = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+let index = 0;
+
+function mostrarSlide(){
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+}
+
+next.addEventListener("click",()=>{
+    index++;
+    if(index >= slide.length){ index = 0; }
+    mostrarSlide();
+});
+
+prev.addEventListener("click",()=>{
+    index--;
+    if(index < 0){ index = slide.length - 1; }
+    mostrarSlide();
+});
+
+dots.forEach((dot,i)=>{
+    dot.addEventListener("click",()=>{
+        index = i;
+        mostrarSlide();
+    });
+});
+</script>
+
+</body>
+</html>
